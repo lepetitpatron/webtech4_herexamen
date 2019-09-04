@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eightball</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+
+
+    <body>
+        <div class="container-fluid ml-3">
+            <p class="display-4">Ask a question</p>
+            
+            <form action='/' method='POST' class='col-3'>
+                <div class="form-group">
+                    <label for='question'>Question</label>
+                    <input type="text" name='question' class="form-control">
+                </div>
+
+                <button class='btn btn-primary'>Ask</button>
+                <button id='btn' class='btn btn-link'>See questions</button>
+            </form>
+        </div>
+
+        <script>
+            let btn = document.getElementById('btn');
+
+            btn.onclick = (e) => {
+                e.preventDefault();
+                window.location.href = '/questions';
+            }
+        </script>
+    </body>
+</html>

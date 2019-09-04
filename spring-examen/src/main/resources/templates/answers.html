@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eightball</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+
+
+    <body>
+        <div class="container-fluid ml-3">
+            <p class="display-4">Q&A</p>
+            
+            <div class="row col-5">
+                <div class="col-sm-6 left">
+                    <ul class="list-group" th:each='question:${questions}'>
+                        <li class="list-group-item" th:text='${question}'></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 right">
+                    <ul class="list-group" th:each='answer:${answers}'>
+                        <li class="list-group-item" th:text='${answer}'></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id='btn' class='btn btn-primary mt-3'>Return</button>
+        </div>
+
+        <script>
+            let btn = document.getElementById('btn');
+
+            btn.onclick = (e) => {
+                e.preventDefault();
+                window.location.href = '/';
+            }
+        </script>
+    </body>
+</html>
