@@ -10,7 +10,7 @@
 
         <ul>
             {% for i in infractions %}
-                <li>{{i}} p</li>
+                <li>{{i.street}} - {{i.speed_limit}} - {{i.infractions_speed}}</li>
             {% endfor %}
         </ul>
     </body>
